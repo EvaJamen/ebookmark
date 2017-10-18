@@ -47,7 +47,7 @@ $labels = array(
   $args = array(
           'label' => __( 'Style' ),
           'rewrite' => array( 'slug' => 'style' ),
-          'hierarchical' => false,
+          'hierarchical' => true,
       );
     register_taxonomy( $taxonomy, $object_type, $args );
       $taxonomy="auteur";
@@ -55,7 +55,7 @@ $labels = array(
   $args = array(
           'label' => __( 'Auteur' ),
           'rewrite' => array( 'slug' => 'auteur' ),
-          'hierarchical' => false,
+          'hierarchical' => true,
       );
     register_taxonomy( $taxonomy, $object_type, $args );
     

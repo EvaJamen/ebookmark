@@ -31,6 +31,7 @@ $labels = array(
       'has_archive'         => false,
       'query_var'           => true,
       'can_export'          => true,
+'has_archive'=> true,
       'rewrite'             => array( 'slug' => $post_type )
   );
   register_post_type($post_type, $args );

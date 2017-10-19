@@ -1,28 +1,8 @@
-<div>
-    
-<?php
-$avis = array (
-	'post_type' => 'ebook'
-);
-$query ->new WP_QUERY($avis);
-$query -> the_post();
-    ?>
-    
-<?php
-//Contrôle ACF
-if (!function_exists(get_field))return;
-?>
-    
-
-</div>
-
-
 <?php get_header(); //appel du template header.php  ?>
 
 <div id="content" class="container">
   <div class="row">
-      <div>testthjbobvcivbbvy</div>
-    <h1 class="col-sm-12">Fiche livre</h1>
+    <h1 class="col-sm-12">Fiche complète</h1>
   </div>
   <div class="row">
     <?php
@@ -38,10 +18,7 @@ if (!function_exists(get_field))return;
             {
               the_post_thumbnail("full");
             }
-            
-            echo the_field('note');
           ?>
-        
         </div>
         <h1><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
         <h2>Posté le <?php the_time('F jS, Y') ?></h2>

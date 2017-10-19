@@ -1,10 +1,14 @@
 <?php get_header(); //appel du template header.php  ?>
 
 <div id="content" class="container">
-  <div class="row">
+    <div class="subtitle">
+    </div>
+  <div class="main">
+  <div>
     <h1 id="impact" class="col-md-12">Livres à la Une</h1>
   </div>
-  <div class="row">
+      
+  <div>
   <?php
   $args= array(
     'post_type' => 'ebook',
@@ -16,8 +20,14 @@
         while ( $the_query->have_posts() ) {
             $the_query->the_post();
     ?>
-      <article class="col-md-4 resume">
-        <div class="thumbnail">
+      <article>
+          <div class="bloc">
+        <h1 class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
+        <h2 class="date">Posté le <?php the_time('j F, Y') ?></h2>
+        <p><?php the_excerpt(); ?></p>
+          </div>
+          
+          <div class="thumbnail">
           <?php
             if(has_post_thumbnail())
             {
@@ -25,10 +35,8 @@
             }
           ?>
         </div>
-        <h1 class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
-        <h2>Posté le <?php the_time('F jS, Y') ?></h2>
-        <p><?php the_excerpt(); ?></p>
       </article>
+      <hr>
             <?php
           }
              /* Restore original Post Data */
@@ -37,10 +45,11 @@
           ?>
   </div>
   <div class="row pagination">
-    <div class="col-sm-12">
+    <div>
       <?php wp_pagenavi(array( 'query' => $the_query )); ?>
     </div>
   </div>
+        </div>
 </div> <!-- /content -->
 
 <?php get_footer(); //appel du template footer.php ?>

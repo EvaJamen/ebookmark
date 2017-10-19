@@ -1,121 +1,133 @@
-body{
-  margin:0;
-  font-size:16px;
-  font-family: 'Slabo 27px', serif;
-    background-image:url(../images/background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+@media (min-width: 1025px) {
+    body{
+        margin:0;
+        font-size:16px;
+        font-family: 'Slabo 27px', serif;
+    }
+/*
+	body{
+        margin:0;
+        font-size:16px;
+        font-family: 'Slabo 27px', serif;
+    }
+
+    .logo{
+        max-width: 150px;
+        height: auto;
+        float:left;
+        margin-right : 30px;
+    }
+
+    header h2{
+        font-size:50px;
+        font-family: 'Montserrat', sans-serif;
+        color: #D61572;
+    }
+
+    a{
+        color:#D61572;
+    text-decoration: none;
+    }
+
+    a:hover{
+        color:#FA7B92;
+        text-decoration: underline;
+    }
+
+    header span{
+        font-size:25px;
+        font-style:italic;
+        font-family: 'Montserrat', sans-serif;
+        color:#D61572;
+    }
+
 }
 
-.logo{
-  max-width: 150px;
-  height: auto;
-  float:left;
-margin-right : 30px;
-}
-
-header h2{
-    font-size:50px;
-    font-family: 'Montserrat', sans-serif;
-    color: #D61572;
-}
-
-a{
-  color:#D61572;
-  text-decoration: none;
-}
-
-a:hover{
-  color:#FA7B92;
-  text-decoration: underline;
-}
-
-header span{
-    font-size:25px;
-    font-style:italic;
-    font-family: 'Montserrat', sans-serif;
-    color:#D61572;
-}
-
-}
-
-header .site_information{
-    font-size:0px;
-    font-family: 'Montserrat', sans-serif;
-    color: #D61572;
-    margin-bottom: 50px;
-}
-
-header#header{
-    padding:30px;
-    font-family: 'Montserrat', sans-serif;
-    background-position:right bottom;
-    height: 300px;
-    background-image: -webkit-gradient(
-	linear,
-	left top,
-	left bottom,
-	color-stop(0, #FACA7D),
-	color-stop(1, #FA7B92)
-);
-}
+    header .site_information{
+        font-size:0px;
+        font-family: 'Montserrat', sans-serif;
+        color: #D61572;
+        margin-bottom: 50px;
+    }
+    
+    #header{
+        padding:30px;
+        font-family: 'Montserrat', sans-serif;
+        background-position:right bottom;
+        height: 300px;
+        background-image:url(../images/background.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }   
+    #header:before{
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FACA7D),color-stop(1, #FA7B92));
+        opacity: 0.7; 
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+    }
 
 
-.main{
-    background: rgba(255, 242, 222, 0.9);
-    padding:30px;
-}
+    .main{
+        background: rgba(255, 242, 222, 0.9);
+        padding:30px;
+    }
 
-#impact{
-  text-transform: uppercase;
-    text-align: center;
-    margin-top:30px;
-  margin-bottom:30px;
-    font-size: 50px;
-    font-family: 'Montserrat', sans-serif;
-    color: #FA7B92;
-    background: rgba(214, 21, 114, 1);
-}
+    #impact{
+        text-transform: uppercase;
+        text-align: center;
+        margin-top:30px;
+        margin-bottom:30px;
+        font-size: 50px;
+        font-family: 'Montserrat', sans-serif;
+        color: #FA7B92;
+        background: rgba(214, 21, 114, 1);
+    }
 
-article{
-    width:100%;
-    height:200px;
-    padding:20px;
-}
+    article{
+        width:100%;
+        height:200px;
+        padding:20px;
+    }
 
 
-.bloc{
-    float:left;
-    margin-left:30px;
-    width:60%;
-}
+    .bloc{
+        float:left;
+        margin-left:30px;
+        width:60%;
+    }
 
-.thumbnail{
-    position:relative;
-    left:20% ;
-}
+    .thumbnail{
+        position:relative;
+        left:20% ;
+    }
 
-.title{
-    font-size: 30px;
-    font-family: 'Montserrat', sans-serif;
-}
+    .title{
+        font-size: 30px;
+        font-family: 'Montserrat', sans-serif;
+    }
 
-.date{
-    font-size: 18px;
-    font-style:italic;
-    font-family: 'Montserrat', sans-serif;
-    color:#FACA7D;
-    margin-top: 10px;
-}
+    .date{
+        font-size: 18px;
+        font-style:italic;
+        font-family: 'Montserrat', sans-serif;
+        color:#FACA7D;
+        margin-top: 10px;
+    }
 
-p{
-    text-align: justify;
-}
+    p{
+        text-align: justify;
+    }
 
-hr{
-  margin: 50px auto;
-  width: 50%;
-  height: 2px;
-  background-color: #D61572;
-  border: none; /*on supprime le style par défaut*/
+    hr{
+        margin: 50px auto;
+        width: 50%;
+    height: 2px;
+    background-color: #D61572;
+    border: none;
+    }
+*/
 }

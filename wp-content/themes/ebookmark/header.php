@@ -22,6 +22,7 @@
                 <div class="site_information">
                   <h2 id="title"><a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'title' ); ?>"><?php bloginfo( 'title' ); ?></a></h2>
                   <span class="description"><?php bloginfo( 'description' ); ?></span>
+                
                 </div>
               </div>
             </div>

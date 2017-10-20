@@ -1,4 +1,7 @@
         <footer id="footer">
+            <div class="footer">
+                
+            </div>
         <!--
             Tout le contenu de la partie head de mon site
          -->

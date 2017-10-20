@@ -1,45 +1,52 @@
 <?php get_header(); //appel du template header.php  ?>
 
 <div id="content" class="container">
-  <div class="row">
-    <h1 class="col-sm-12">Fiche complète</h1>
+    
+  <div class="main">
+  <div class="single_impact">
+    <h1 class='single_title'>Fiche de lecture</h1>
   </div>
-  <div class="row">
-    <?php
-    // boucle WordPress
+      
+  <div >
+  <?php
+  $args= array(
+    'post_type' => 'ebook',
+    'posts_per_page' => 1
+  );
+  $the_query = new WP_Query( $args );
+    // The Loop
+      
     if (have_posts()){
         while (have_posts()){
             the_post();
     ?>
-      <article class="col-sm-12">
-        <div class="thumbnail">
+      <article class="single_article">
+          <div class="bloc">
+        <h1 class="article_title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
+        <h2 class="date">Posté le <?php the_time('j F, Y') ?></h2>
+        <p><?php the_content(); ?></p>
+              <hr>
+              <p class="postmetadata">Posted in <?php the_taxonomies(', '); ?></p>
+          </div>
+          
+          <div class="thumbnail">
           <?php
             if(has_post_thumbnail())
             {
-              the_post_thumbnail("full");
+              the_post_thumbnail("hub_article_thumbnail");
             }
           ?>
         </div>
-        <h1><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
-        <h2>Posté le <?php the_time('F jS, Y') ?></h2>
-        <p><?php the_content(); ?></p>
       </article>
-
-    <?php
-    }
-    }
-    else {
-    ?>
-    Nous n'avons pas trouvé d'article répondant à votre recherche
-    <?php
-    }
-    ?>
+            <?php
+          }
+             /* Restore original Post Data */
+             wp_reset_postdata();
+         }
+          ?>
+      
   </div>
-  <div class="row pagination">
-    <div class="col-sm-12">
-      <?php wp_pagenavi(); ?>
-    </div>
-  </div>
+        </div>
 </div> <!-- /content -->
 
 <?php get_footer(); //appel du template footer.php ?>

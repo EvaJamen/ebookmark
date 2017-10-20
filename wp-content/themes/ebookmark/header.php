@@ -18,9 +18,9 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-12">
-                <img src="<?= IMAGES_URL;?>/logo.gif" class="logo" alt="logo du site <?php bloginfo( 'title' ); ?>"/>
+                <!--<img src="<?= IMAGES_URL;?>/logo.gif" class="logo" alt="logo du site <?php bloginfo( 'title' ); ?>"/>-->
                 <div class="site_information">
-                  <h2 id="title"><a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'title' ); ?>"><?php bloginfo( 'title' ); ?></a></h2>
+                  <h2 class="site_title"><a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'title' ); ?>"><?php bloginfo( 'title' ); ?></a></h2>
                   <span class="description"><?php bloginfo( 'description' ); ?></span>
                 
                 </div>

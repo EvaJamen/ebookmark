@@ -5,5 +5,5 @@ function thumbnails_theme_support(){
 }
 add_action( 'after_setup_theme', 'create_image_format' );
 function create_image_format() {
-  add_image_size( "hub_article_thumbnail", 200, 200, true );
+  add_image_size( "hub_article_thumbnail", 300, 300, true );
 }
